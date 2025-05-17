@@ -6,6 +6,6 @@ jobs:
   hola:
     runs-on: ubuntu-latest
 
-steps:
-- name: Hola Mundo
-  run: echo "Hola Mundo"
+    steps:
+      - name: Hola Mundo
+        run: echo "Hola Mundo"
