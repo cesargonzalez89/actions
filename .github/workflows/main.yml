@@ -35,7 +35,15 @@ jobs:
         node-version: latest
 
     - name: node version
-      run: node -v
+      run: node -version
+
+    - name: PHP
+      uses: shivammathur/setup-phpav2
+      with: 
+        php-version: '8.3'
+    
+    - name: php version
+      run: php --version
 
     #- name: ls
     #  run: |
