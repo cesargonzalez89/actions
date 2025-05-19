@@ -17,4 +17,7 @@ jobs:
           echo "Valor general: $MY_VAR"
           echo "Valor step: $STEP_MY_VAR"
           echo "Valor configuracion: ${{ vars.MY_VARIABLE_2 }}"
+
+      - name: Secret
+        run: echo "Secret ${{ secrets.MY_SECRET }}"
           
