@@ -13,7 +13,7 @@ jobs:
           - 3306:3306
         env:
           MYSQL_ROOT_PASSWORD: example
-          
+
     steps:
       - name: Test
-        uses: ls
+        run: ls
