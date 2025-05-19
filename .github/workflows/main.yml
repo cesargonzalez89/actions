@@ -35,7 +35,7 @@ jobs:
         node-version: latest
 
     - name: node version
-      run: node -version
+      run: node --version
 
     - name: PHP
       uses: shivammathur/setup-php@v2
