@@ -14,5 +14,7 @@ jobs:
         env:
           STEP_MY_VAR: Nivel step
         run: |
-          echo "Valor: $STEP_MY_VAR"
-          echo "Valor: $MY_VAR"
+          echo "Valor general: $MY_VAR"
+          echo "Valor step: $STEP_MY_VAR"
+          echo "Valor configuracion: ${{ vars.MY_VARIABLE_2 }}"
+          
