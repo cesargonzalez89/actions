@@ -1,0 +1,21 @@
+name: Test Composite Action
+
+on: [push]
+
+jobs:
+    local-action:
+        runs-on: ubuntu-latest
+        
+        steps:
+          - name: Checkout code
+            id: checkout
+            uses: actions/checkout@v3
+
+          - name: Notification
+            uses: rtCamp/action-slack-notify@v2.1.1
+            if: steps.checkout.outcome == 'success'
+            env:
+              SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+            with:
+              author_name: 'Action'
+              fields: repo,message,commit,author,action,eventName
