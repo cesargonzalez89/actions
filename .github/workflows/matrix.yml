@@ -12,12 +12,12 @@ jobs:
 
         steps:
             - name: Checkout code
-             uses: actions/checkout@v3
+              uses: actions/checkout@v3
 
             - name: SET up PHP
-             uses: shivammathur/setup-php@v2
-             with:
-                php-version: ${{} matrix.php-version }}
+              uses: shivammathur/setup-php@v2
+              with:
+                php-version: ${{ matrix.php-version }}
 
             - name: Run script
               run: |
