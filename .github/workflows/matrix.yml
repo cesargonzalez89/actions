@@ -7,19 +7,19 @@ jobs:
         runs-on: ubuntu-latest
         
         strategy:
-            matrix:
-                php-version: [7.4, 8.0, 8.11]
+          matrix:
+            php-version: [7.4, 8.0, 8.11]
 
         steps:
-            - name: Checkout code
-              uses: actions/checkout@v3
+          - name: Checkout code
+            uses: actions/checkout@v3
 
-            - name: SET up PHP
-              uses: shivammathur/setup-php@v2
-              with:
-                php-version: ${{ matrix.php-version }}
+          - name: SET up PHP
+            uses: shivammathur/setup-php@v2
+            with:
+              php-version: ${{ matrix.php-version }}
 
-            - name: Run script
-              run: |
-                echo "PHP VERSION ${f matrix.php-version 7}"
-                php -v
+          - name: Run script
+            run: |
+              echo "PHP VERSION ${f matrix.php-version 7}"
+              php -v
